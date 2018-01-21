@@ -1,0 +1,161 @@
+.navbar {
+  letter-spacing: 2px;
+  background-color: #fff;
+  /*background-color: #0288D1;*/
+  /*background-color: rgb(0,0,0);*/
+  /*background-color: #30c9e8;*/
+  /*background-color:#02abd6;*/
+  display: block;
+  overflow: hidden;
+  height: 64px;
+  width: 100%;
+  margin: 0 auto;
+  top: 0px;
+  z-index: 1000;
+  text-transform: uppercase;
+}
+
+.nav-container {
+  width: 1170px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 250px;
+  display: inline-block;
+}
+
+.navbar a {
+  display: inline-block;
+  position: relative;
+  /*color: #fff;*/
+  /*color: #B3E5FC;*/
+  /*color: #000;*/
+  color: rgba(0,0,0,0.8);
+  text-align: center;
+  padding:  0 14px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.navbar-nav {
+  display: inline-block;
+  list-style: none;
+  width: 360px;
+}
+
+.navbar-nav li {
+  display: inline;
+}
+
+.collapse-nav {
+  max-height: 0;
+  width: 100%;
+  z-index: 1;
+  top: 10;
+  left: 0;
+  background-color: #fff;
+  overflow-y: hidden;
+  transition: max-height 0.3s;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.collapse-nav a {
+  padding: 10px 10px 10px 30px;
+  text-decoration: none;
+  font-size: 17px;
+  color: rgba(0, 0, 0, 0.8);
+  transition: 0.3s;
+  letter-spacing: 1px;
+}
+
+.collapse-nav a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.collapse-nav .btn-close {
+  position: absolute;
+  top: 0;
+  right: 22px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media(max-width: 700px) {
+  .navbar-nav {
+    display: none;
+  }
+}
+
+.open {
+  max-height: 140px;
+}
+
+li > a:before{
+  content:"";
+  position: absolute;
+  width: 72%;
+  height: 2px;
+  bottom: 0;
+  left: 13%;
+  background-color: rgba(0, 0, 0, 0.8);
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+li > a:hover:before{
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.about:before {
+  width: 67%;
+  left: 15%;
+}
+
+.projects:before {
+  width: 73%;
+}
+
+.logo > a:before{
+  content:"";
+  position: absolute;
+  width: 86%;
+  height: 2px;
+  bottom: 0;
+  left: 7%;
+  background-color: rgba(0, 0, 0, 0.8);
+  /*background-color: #fff;*/
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.logo > a:hover:before{
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/*
+*media queries
+*/
+
+@media(max-width: 1100px) {
+  .nav-container {
+    width: 100%;
+  }
+}
