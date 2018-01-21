@@ -5,7 +5,7 @@
       <h1>Projects</h1>
     </div>
   </div>
-  <div class="project-wrapper" v-for="info in cardInfo" :key="info.id">
+  <div class="project-wrapper" v-for="info in cardInfo">
     <div class="project-title">
       <h1>{{ info.title }}</h1>
     </div>
@@ -15,12 +15,12 @@
       </div>
       <div class="project-info">
         <p>{{ info.text }}</p>
-        <button><a :href="info.code" target="_blank">View Code</a></button>
-        <button><a :href="info.projectLink" target="_blank">View Project</a></button>
+        <a class="btn" :href="info.code" target="_blank">View Code</a>
+        <a class="btn" :href="info.projectLink" target="_blank">View Project</a>
         <div class="technologies">
           <h3>Technologies Used</h3>
           <ul>
-            <li v-for="tech in info.technology" :key="tech.id">{{tech}}</li>
+            <li v-for="tech in info.technology">{{tech}}</li>
           </ul>
         </div>
       </div>
@@ -38,7 +38,7 @@ export default {
     return {
       cardInfo: [
         {
-          image: '../../static/img/tonyopPortV12.png',
+          image: '/static/img/tonyopPortV12.png',
           title: 'Portfolio Page v1',
           text: 'Portfolio page.',
           alt: 'Tony Oliver-Paull',
@@ -47,7 +47,7 @@ export default {
           code: 'https://github.com/tonyOP1985/Portfolio-Page'
         },
         {
-          image: '../../static/img/cloudy-day.svg',
+          image: '/static/img/cloudy-day.svg',
           title: 'Weather App',
           text: 'Simple weather app.',
           alt: 'Weather App Cloud Icon',
@@ -56,7 +56,7 @@ export default {
           code: 'https://github.com/tonyOP1985/local-weather-app/tree/master/local-weather'
         },
         {
-          image: '../../static/img/sailor-moon.jpg',
+          image: '/static/img/sailor-moon.jpg',
           title: 'Sailor Moon Game',
           text: 'Game based off of the Japanese anime.',
           alt: 'Sailor Moon',
@@ -65,7 +65,7 @@ export default {
           code: 'https://github.com/tonyOP1985/sailor-moon-game'
         },
         {
-          image: '../../static/img/indecisionApp1.png',
+          image: '/static/img/indecisionApp1.png',
           title: 'Indecision App',
           text: 'Very first Vue.js app. Todo list that decides for you.',
           alt: 'Indecision App',
@@ -74,7 +74,7 @@ export default {
           code: 'https://github.com/tonyOP1985/Indecision-App'
         },
         {
-          image: '../../static/img/hangManThumbNail.png',
+          image: '/static/img/hangManThumbNail.png',
           title: 'Hang Man',
           text: 'Hang Man game with astronomy terms.',
           alt: 'Hang man image',
@@ -150,7 +150,8 @@ export default {
   width: 40%;
 }
 
-button {
+.btn {
+  display: block;
   font-family: 'Montserrat', sans-serif;
   width: 160px;
   margin: 10px 0;
@@ -158,20 +159,22 @@ button {
   border: none;
   background-color: #30c9e8;
   color: #fff;
+  text-decoration: none;
+  text-align: center;
   font-size: 1rem;
   cursor: pointer;
   letter-spacing: 1px;
   transition: all 0.2s ease;
 }
 
-button:hover {
+.btn:hover {
   background-color: #02abd6;
 }
 
-button a {
+/* button a {
   text-decoration: none;
   color: #fff;
-}
+} */
 
 .technologies ul {
   list-style: none;
