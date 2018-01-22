@@ -38,9 +38,9 @@ export default {
     return {
       cardInfo: [
         {
-          image: '/static/img/projectImg/tonyopPortV12.png',
+          image: '/static/img/tonyProjectImg.png',
           title: 'Portfolio Page v1',
-          text: 'Portfolio page.',
+          text: 'First version of my portfolio page.',
           alt: 'Tony Oliver-Paull',
           technology: ['Vue.js', 'Vue-router', 'Bootstrap-Vue', 'Nodemailer', 'Express.js'],
           projectLink: '#',
@@ -142,6 +142,8 @@ export default {
 
 .project-img img {
   width: 400px;
+  height: 245px;
+  margin: 0 auto;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 5px 0px, rgba(0, 0, 0, 0.12) 0px 2px 10px 0px;
 }
 
@@ -201,6 +203,7 @@ ul li:before {
 
   .project-img img {
     width: 300px;
+    height: 184px;
   }
 
   .project-title {
@@ -234,8 +237,14 @@ ul li:before {
 }
 
 @media(max-width: 400px) {
+  .project-title h1 {
+    font-size: 1.2rem;
+  }
+
+
   .project-img img {
     width: 200px;
+    height: 122.5px;
   }
 }
 </style>
