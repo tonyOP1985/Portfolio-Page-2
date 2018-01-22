@@ -212,10 +212,15 @@ export default {
     font-size: 4rem;
   }
   .heading-primary {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
   .icon {
-    /*margin-right: 5px;*/
+    margin-right: 5px;
+  }
+  .links {
+    width: 250px;
+    margin: 0 auto;
   }
 }
+
 </style>

@@ -5,7 +5,7 @@
       <h1>Projects</h1>
     </div>
   </div>
-  <div class="project-wrapper" v-for="info in cardInfo">
+  <div class="project-wrapper" v-for="info in cardInfo" :key="info">
     <div class="project-title">
       <h1>{{ info.title }}</h1>
     </div>
@@ -20,7 +20,7 @@
         <div class="technologies">
           <h3>Technologies Used</h3>
           <ul>
-            <li v-for="tech in info.technology">{{tech}}</li>
+            <li v-for="tech in info.technology" :key="tech">{{tech}}</li>
           </ul>
         </div>
       </div>
@@ -38,7 +38,7 @@ export default {
     return {
       cardInfo: [
         {
-          image: '/static/img/tonyopPortV12.png',
+          image: '/static/img/projectImg/tonyopPortV12.png',
           title: 'Portfolio Page v1',
           text: 'Portfolio page.',
           alt: 'Tony Oliver-Paull',
@@ -142,7 +142,6 @@ export default {
 
 .project-img img {
   width: 400px;
-  height: 100%;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 5px 0px, rgba(0, 0, 0, 0.12) 0px 2px 10px 0px;
 }
 
