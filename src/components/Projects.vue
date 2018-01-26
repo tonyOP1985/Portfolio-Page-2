@@ -56,13 +56,13 @@ export default {
           code: 'https://github.com/tonyOP1985/local-weather-app/tree/master/local-weather'
         },
         {
-          image: '/static/img/sailor-moon.jpg',
-          title: 'Sailor Moon Game',
-          text: 'Game based off of the Japanese anime.',
-          alt: 'Sailor Moon',
-          technology: ['Vue.js', 'Express.js'],
-          projectLink: 'https://sailor-moon-game.herokuapp.com/',
-          code: 'https://github.com/tonyOP1985/sailor-moon-game'
+          image: '/static/img/musicHistoryQuiz.png',
+          title: 'Music History Quiz',
+          text: 'Quiz biult for a few music students.',
+          alt: 'Music History Quiz',
+          technology: ['Vue.js'],
+          projectLink: 'https://music-history-quiz.herokuapp.com/',
+          code: 'https://github.com/tonyOP1985/music-history-quiz'
         },
         {
           image: '/static/img/indecisionApp1.png',
