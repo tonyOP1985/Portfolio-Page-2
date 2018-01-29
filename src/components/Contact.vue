@@ -5,11 +5,15 @@
       <h1>Contact</h1>
     </div>
   </div>
+   <div class="msg">
+      <p>{{ msg }}</p>
+    </div>
   <div class="form-area">
-    <form action="">
+    <form @submit.prevent="onSubmit" method="POST">
       <div class="form-group">
         <input type="text"
                name="name"
+               v-model="name"
                required>
         <span class="bar"></span>
         <label for="name">Name</label>
@@ -17,6 +21,7 @@
       <div class="form-group">
         <input type="email"
                name="email"
+               v-model="email"
                required>
         <span class="bar"></span>
         <label for="email">Email address</label>
@@ -24,13 +29,15 @@
       <div class="form-group">
         <input type="tel"
                name="phone"
+               v-model="phone"
                required>
         <span class="bar"></span>
         <label for="phone">Phone number</label>
       </div>
       <div class="form-group gotcha">
         <input type="text"
-               name="gotcha">
+               name="gotcha"
+               v-model="gotcha">
         <span class="bar"></span>
         <label for="gotcha">Leave blank if you're human</label>
       </div>
@@ -39,11 +46,12 @@
                   id="msg"
                   cols="30"
                   rows="5"
+                  v-model="messageBody"
                   required></textarea>
         <span class="bar"></span>
         <label for="messsage">Message</label>
       </div>
-      <button>SEND</button>
+      <button type="submit">SEND</button>
     </form>
   </div>
 </div>
@@ -51,14 +59,62 @@
 </template>
 
 <script>
+import axios from 'axios'
 /* eslint-disable */
 export default {
-  name: 'contact'
+  name: 'contact',
+  data () {
+    return {
+      name: '',
+      email: '',
+      phone: '',
+      gotcha: '',
+      messageBody: '',
+      form: {
+        name: '',
+        email: '',
+        phone: '',
+        gotcha: '',
+        messageBody: ''
+      },
+      msg: ''
+    }
+  },
+  methods: {
+    onSubmit () {
+      this.form.name = this.name
+      this.form.email = this.email
+      this.form.phone = this.phone
+      this.form.gotcha = this.gotcha
+      this.form.messageBody = this.messageBody
+      axios
+        .post("http://localhost:5000/", this.form)
+        .then(response => {
+          console.log(response)
+          this.msg = response.data
+          setTimeout(() => {
+            this.msg = ''
+          }, 5000)
+        })
+        .catch(error => {
+          console.log(error)
+          this.msg = `This is embarassing. It appears something has gone wrong. :(
+                      Due to the error you can also contact me at toliverpaull@gmail.com.`
+        });
+      this.onReset()
+    },
+    onReset () {
+      this.name = '',
+      this.email = '',
+      this.phone = '',
+      this.gotcha = '',
+      this.messageBody = ''
+    }
+  }
 }
-
 </script>
 
-<style scoped="">
+<style scoped>
 .contact {
   width: 100%;
   min-height: 100%;
@@ -67,7 +123,7 @@ export default {
 .title {
   /*background-color: #2098D1;*/
   /*background: linear-gradient(45deg, #FFC01C, #2098D1);*/
-  background: linear-gradient(45deg, #FFBF30, #30c9e8);
+  background: linear-gradient(45deg, #ffbf30, #30c9e8);
   width: 100%;
   height: 300px;
   padding: 40px 0;
@@ -102,8 +158,12 @@ export default {
   padding: 50px 10px;
   display: flex;
   justify-content: space-around;
-  /*box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 5px 0px, rgba(0, 0, 0, 0.12) 0px 2px 10px 0px;*/
   margin-bottom: 40px;
+}
+
+.msg {
+  width: 100%;
+  text-align: center;
 }
 
 form {
@@ -132,6 +192,7 @@ textarea {
   border-bottom: 1px solid #999;
   font-size: 1rem;
   font-family: "Roboto", sans-serif;
+  resize: none;
 }
 
 input:focus,
@@ -154,10 +215,10 @@ label {
 
 /*active state*/
 
-input:focus~label,
-input:valid~label,
-textarea:focus~label,
-textarea:valid~label {
+input:focus ~ label,
+input:valid ~ label,
+textarea:focus ~ label,
+textarea:valid ~ label {
   top: -20px;
   font-size: 14px;
   color: #02abd6;
@@ -194,10 +255,10 @@ textarea:valid~label {
 
 /* active state */
 
-input:focus~.bar:before,
-input:focus~.bar:after,
-textarea:focus~.bar:before,
-textarea:focus~.bar:after {
+input:focus ~ .bar:before,
+input:focus ~ .bar:after,
+textarea:focus ~ .bar:before,
+textarea:focus ~ .bar:after {
   width: 50%;
 }
 
@@ -206,7 +267,7 @@ textarea:focus~.bar:after {
 }
 
 button {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   padding: 10px 30px;
   border: none;
   background-color: #30c9e8;
@@ -221,28 +282,33 @@ button:hover {
   background-color: #02abd6;
 }
 
-@media(max-width: 740px) {
+@media (max-width: 740px) {
   .title-main,
   .title-sub {
     width: 100%;
   }
 }
 
-@media(max-width: 700px) {
+@media (max-width: 700px) {
   .title {
     height: 200px;
   }
 }
 
-@media(max-width: 500px) {
+@media (max-width: 500px) {
   .title-main h1 {
     font-size: 2.5rem;
   }
 }
 
-@media(max-width: 750px) {
+@media (max-width: 750px) {
   .form-area {
     width: 95%;
   }
+}
+
+input:-webkit-autofill {
+  box-shadow: 0 0 0 50px #fff inset;
+  -webkit-box-shadow: 0 0 0 50px #fff inset;
 }
 </style>

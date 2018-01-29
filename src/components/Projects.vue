@@ -15,8 +15,13 @@
       </div>
       <div class="project-info">
         <p>{{ info.text }}</p>
-        <a class="btn" :href="info.code" target="_blank">View Code</a>
-        <a class="btn" :href="info.projectLink" target="_blank">View Project</a>
+        <div v-if="!info.projectLink.length">
+          <a class="btn" :href="info.code" target="_blank">View Code</a>
+        </div>
+        <div v-else>
+          <a class="btn" :href="info.code" target="_blank">View Code</a>
+          <a class="btn" :href="info.projectLink" target="_blank">View Project</a>
+        </div>
         <div class="technologies">
           <h3>Technologies Used</h3>
           <ul>
@@ -38,31 +43,58 @@ export default {
     return {
       cardInfo: [
         {
-          image: '/static/img/tonyProjectImg.png',
-          title: 'Portfolio Page v1',
-          text: 'First version of my portfolio page.',
-          alt: 'Tony Oliver-Paull',
-          technology: ['Vue.js', 'Vue-router', 'Bootstrap-Vue', 'Nodemailer', 'Express.js'],
-          projectLink: '#',
-          code: 'https://github.com/tonyOP1985/Portfolio-Page'
+          image: '/static/img/portfolio1.png',
+          title: 'Tony Oliver-Paull',
+          text: 'Current portfolio page.',
+          alt: 'Tony Oliver-Paull portfolio page',
+          technology: ['Vue.js', 'Vue-router', 'Axios', 'Node.js', 'Express', 'Nodemailer'],
+          projectLink: '',
+          code: 'https://github.com/tonyOP1985/Portfolio-Page-2'
         },
         {
           image: '/static/img/cloudy-day.svg',
           title: 'Weather App',
           text: 'Simple weather app.',
           alt: 'Weather App Cloud Icon',
-          technology: ['Vue.js', 'Darksky API', 'Google Maps Geocoding API', 'Express.js'],
+          technology: ['Vue.js', 'Axios', 'Dark Sky API', 'Google Maps Geocoding API', 'Express'],
           projectLink: 'https://localweatherapp-tonyop.herokuapp.com/',
           code: 'https://github.com/tonyOP1985/local-weather-app/tree/master/local-weather'
         },
         {
           image: '/static/img/musicHistoryQuiz.png',
           title: 'Music History Quiz',
-          text: 'Quiz biult for a few music students.',
+          text: 'Quiz built for a few music students.',
           alt: 'Music History Quiz',
           technology: ['Vue.js'],
           projectLink: 'https://music-history-quiz.herokuapp.com/',
           code: 'https://github.com/tonyOP1985/music-history-quiz'
+        },
+        {
+          image: '/static/img/songlist1.png',
+          title: 'Song List',
+          text: 'RESTful API with MongoDB.',
+          alt: 'Song List home page',
+          technology: ['Node.js', 'Handlerbars', 'Bootstrap', 'Express', 'MongoDB', 'Mongoose', 'mLab'],
+          projectLink: 'https://enigmatic-sea-59333.herokuapp.com/users/login',
+          code: 'https://github.com/tonyOP1985/SongList'
+        },
+        {
+          image: '/static/img/apiGet.png',
+          title: 'Musician Availability API',
+          text: 'RESTful API with MongoDB.',
+          alt: 'Node.js Code',
+          technology: ['Node.js','Express', 'MongoDB', 'Mongoose'],
+          projectLink: '',
+          code: 'https://github.com/tonyOP1985/musician-availability-api'
+        },
+        {
+          image: '/static/img/tonyProjectImg.png',
+          title: 'Portfolio Page v1',
+          text: 'First version of my portfolio page.',
+          alt: 'Tony Oliver-Paull',
+          technology: ['Vue.js', 'Vue-router', 'Bootstrap-Vue', 'Nodemailer', 'Express'],
+          projectLink: 'https://tonyop-portfolio-v1.herokuapp.com/',
+          code: 'https://github.com/tonyOP1985/Portfolio-Page'
         },
         {
           image: '/static/img/indecisionApp1.png',
@@ -78,7 +110,7 @@ export default {
           title: 'Hang Man',
           text: 'Hang Man game with astronomy terms.',
           alt: 'Hang man image',
-          technology: ['Javascript', 'jQuery', 'HTML', 'CSS', 'Express.js'],
+          technology: ['Javascript', 'jQuery', 'HTML', 'CSS'],
           projectLink: 'https://ancient-journey-60616.herokuapp.com/',
           code: 'https://github.com/tonyOP1985/NodeHangMan'
         }
@@ -172,11 +204,6 @@ export default {
   background-color: #02abd6;
 }
 
-/* button a {
-  text-decoration: none;
-  color: #fff;
-} */
-
 .technologies ul {
   list-style: none;
 }
@@ -245,6 +272,7 @@ ul li:before {
   .project-img img {
     width: 200px;
     height: 122.5px;
+    /* margin: 0 auto; */
   }
 }
 </style>

@@ -6,10 +6,10 @@
     </div>
     <div class="links">
       <div class="links-wrapper">
-        <a href="#" class="btn icon">
+        <a href="https://github.com/tonyOP1985" target="_blank" class="btn icon">
           <i class="fa fa-github fa-2x" aria-hidden="true"></i>
         </a>
-        <a href="#" class="btn icon">
+        <a href="https://www.linkedin.com/in/tony-oliverpaull-62b21434/" target="_blank" class="btn icon">
           <i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
         </a>
         <router-link to='/contact' class="btn icon">

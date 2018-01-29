@@ -3,9 +3,6 @@
     <section class="about">
       <div class="body-container">
         <header class="header-main">
-         <!--  <div class="greeting-box">
-            <h1 class="greeting">Hello!</h1>
-          </div> -->
           <div class="text-box">
             <div class="heading-primary">
               <span class="heading-primary-main">Tony Oliver-Paull &mdash;</span>
@@ -14,16 +11,16 @@
           </div>
           <div class="link-box">
             <div class="links">
-              <a href="#" class="btn icon">
+              <a href="https://github.com/tonyOP1985" target="_blank" class="btn icon">
                 <i class="fa fa-github fa-lg" aria-hidden="true"></i>
               </a>
-              <a href="#" class="btn icon">
+              <a href="https://www.linkedin.com/in/tony-oliverpaull-62b21434/" target="_blank" class="btn icon">
                 <i class="fa fa-linkedin fa-lg" aria-hidden="true"></i>
               </a>
               <router-link to='/contact' class="btn icon">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
               </router-link>
-              <a href="#" class="resume btn">résumé</a>
+              <a href="../../static/tOliverPaullResume.pdf" target="_blank" class="resume btn">résumé</a>
             </div>
           </div>
         </header>
@@ -48,16 +45,7 @@ export default {
   .about {
     width: 100%;
     height: 300px;
-    /*background-color: #30c9e8;*/
     background: linear-gradient(45deg, #FFBF30, #30c9e8);
-    /*background-image: 
-    linear-gradient(
-    to right bottom,
-    rgba(255, 191, 48, 0.4), 
-    rgba(48, 203, 232, 0.4)), 
-    url(../../static/img/hero2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;*/
     color: #fff;
     transition: all 0.2s ease;
     overflow: hidden;
@@ -74,17 +62,6 @@ export default {
 
   .header-main {
     width: 100%;
-  }
-
-  .greeting-box {
-    width: 100%;
-  }
-
-  .greeting {
-    font-size: 10rem;
-    text-shadow: 0px 25px 25px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    transition: all 0.2s ease;
   }
 
   .text-box {
@@ -124,8 +101,8 @@ export default {
     margin-right: 20px;
     width: 40px;
     height: 40px;
-    background-color:#02abd6;
-    /*background-color: #FF1800;*/
+    /* background-color:#02abd6; */
+    background-color:#0291b4;
     border-radius: 100px;
     color: #fff;
     transition: all 0.2s ease;
@@ -148,8 +125,8 @@ export default {
     font-size: 16px;
     font-weight: 600;
     letter-spacing: 2px;
-    background-color:#02abd6;
-    /*background-color: #FF1800;*/
+    /* background-color:#02abd6; */
+    background-color:#0291b4;
     border-radius: 100px;
     color: #fff;
     text-transform: uppercase;
@@ -157,14 +134,10 @@ export default {
   }
 
   .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    /* background-color:#0291b4; */
+    background-color:#02abd6;
   }
 
-  .btn:active {
-    transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-}
 
 @media(max-width: 1200px) {
  /* .about {
