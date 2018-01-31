@@ -88,7 +88,7 @@ export default {
       this.form.gotcha = this.gotcha
       this.form.messageBody = this.messageBody
       axios
-        .post("http://localhost:5000/", this.form)
+        .post("http://www.toliverpaull.com/", this.form)
         .then(response => {
           console.log(response)
           this.msg = response.data
