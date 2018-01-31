@@ -4,7 +4,6 @@ const cors = require('cors')
 const bodyParser = require('body-parser')
 const path = require('path')
 const serveStatic = require('serve-static')
-const history = require('connect-history-api-fallback')
 const fs = require('fs')
 const auth = JSON.parse(fs.readFileSync('auth.json'));
 
@@ -12,7 +11,6 @@ const app = express()
 
 app.use(cors())
 app.use(bodyParser())
-app.use(history())
 app.use(serveStatic(path.join(__dirname + "/dist")))
 
 app.post('/', (req, res) => {
