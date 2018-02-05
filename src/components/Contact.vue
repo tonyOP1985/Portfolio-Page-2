@@ -98,8 +98,7 @@ export default {
           console.log(error)
           this.msg = `This is embarassing. It appears something has gone wrong. :(
                       Due to the error you can also contact me at toliverpaull@gmail.com.`
-        });
-      console.log(this.form)
+        })
       this.submitted = true
       setTimeout(() => {
         this.submitted = false
