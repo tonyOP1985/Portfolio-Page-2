@@ -5,10 +5,10 @@
       <h1>Contact</h1>
     </div>
   </div>
-   <div class="msg">
+   <div class="msg" v-if="submitted">
       <p>{{ msg }}</p>
     </div>
-  <div class="form-area">
+  <div class="form-area" v-else>
     <form @submit.prevent="onSubmit" method="POST">
       <div class="form-group">
         <input type="text"
@@ -59,8 +59,9 @@
 </template>
 
 <script>
-import axios from 'axios'
 /* eslint-disable */
+import axios from 'axios'
+
 export default {
   name: 'contact',
   data () {
@@ -77,7 +78,8 @@ export default {
         gotcha: '',
         messageBody: ''
       },
-      msg: ''
+      msg: '',
+      submitted: false
     }
   },
   methods: {
@@ -91,16 +93,18 @@ export default {
         .post("https://www.toliverpaull.com/", this.form)
         .then(response => {
           this.msg = response.data
-          setTimeout(() => {
-            this.msg = ''
-          }, 5000)
         })
         .catch(error => {
           console.log(error)
           this.msg = `This is embarassing. It appears something has gone wrong. :(
                       Due to the error you can also contact me at toliverpaull@gmail.com.`
         });
-      this.onReset()
+      console.log(this.form)
+      this.submitted = true
+      setTimeout(() => {
+        this.submitted = false
+        this.onReset()
+      }, 5000)
     },
     onReset () {
       this.name = '',
@@ -120,8 +124,6 @@ export default {
 }
 
 .title {
-  /*background-color: #2098D1;*/
-  /*background: linear-gradient(45deg, #FFC01C, #2098D1);*/
   background: linear-gradient(45deg, #ffbf30, #30c9e8);
   width: 100%;
   height: 300px;
@@ -162,6 +164,7 @@ export default {
 
 .msg {
   width: 100%;
+  height: 616px;
   text-align: center;
 }
 

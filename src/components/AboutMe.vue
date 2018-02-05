@@ -8,9 +8,7 @@
       <div class="about-content">
         <img class="image" src="../assets/projectImg/tony-port-img.png" alt="Tony Oliver-Paull">
         <div class="about-p">
-          <p>
-            I am a full-stack web-developer who has experience with technologies that include Javascript, HTML, CSS, Vue.js, Node.js, PHP, Python, MongoDB, and MySQL. Ever since I started to learn development I have grown very passionate about it and have developed a continual desire to learn more. I enjoy working on projects that require me to extend myself to outside of my comfort zone and knowledge set.
-          </p>
+          <p>I am a full-stack web developer with exprerience in all layers of software development, including a knowledge of Javascript, HTML, CSS, Vue,js, Node.js, PHP, Python, MongoDB, and MySQL. I'm passionate about software development, both on the front and back end, and I am always working to learn more. I enjoy projects that push me outside of my comfort zone and knowledge set.</p>
         </div>
       </div>
     </div>
@@ -22,21 +20,21 @@
         <h3>Front-End Skills</h3>
         <div class="skills">
           <div class="devicons-wrapper">
-            <a href="#">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
               <div class="devicons">
                 <img src="../../static/img/devicons/html5-original.svg"
                      alt="html5">
                 <p>HTML5</p>
               </div>
             </a>
-            <a href="#">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
               <div class="devicons">
                 <img src="../../static/img/devicons/css3-original.svg"
                      alt="css3">
                 <p>CSS3</p>
               </div>
             </a>
-            <a href="#">
+            <a href="https://www.javascript.com/" target="_blank">
               <div class="devicons">
                 <img src="../../static/img/devicons/javascript-original.svg"
                      alt="javascript">
@@ -45,21 +43,21 @@
             </a>
           </div>
           <div class="devicons-wrapper">
-            <a href="#">
+            <a href="https://jquery.com/" target="_blank">
               <div class="devicons">
                 <img src="../../static/img/devicons/jquery-original.svg"
                      alt="jquery">
                 <p>jQuery</p>
               </div>
             </a>
-            <a href="#">
+            <a href="https://vuejs.org/" target="_blank">
               <div class="devicons">
                 <img src="../../static/img/devicons/vuejs-original.svg"
                      alt="vuejs">
                 <p>Vue</p>
               </div>
             </a>
-            <a href="#">
+            <a href="http://handlebarsjs.com/" target="_blank">
               <div class="devicons">
                 <img src="../../static/img/devicons/handlebars-original.svg"
                      alt="handlebars">
@@ -73,21 +71,21 @@
         <h3>Back-end Skills</h3>
         <div class="skills">
           <div class="devicons-wrapper">
-            <a href="#">
+            <a href="https://nodejs.org/en/" target="_blank">
               <div class="devicons">
                 <img src="../../static/img/devicons/nodejs-original.svg"
                      alt="nodejs">
                 <p>Node</p>
               </div>
             </a>
-            <a href="#">
+            <a href="https://expressjs.com/" target="_blank">
               <div class="devicons">
                 <img src="../../static/img/devicons/express-original-wordmark.svg"
                      alt="express">
                 <p>Express</p>
               </div>
             </a>
-            <a href="#">
+            <a href="http://www.php.net/" target="_blank">
               <div class="devicons">
                 <img src="../../static/img/devicons/php-plain.svg"
                      alt="php">
@@ -96,25 +94,25 @@
             </a>
           </div>
           <div class="devicons-wrapper">
-            <a href="#">
+            <a href="https://www.mongodb.com/" target="_blank">
               <div class="devicons">
                 <img src="../../static/img/devicons/mongodb-original-wordmark.svg"
                      alt="mongodb">
                 <p>MongoDB</p>
               </div>
             </a>
-            <a href="#">
+            <a href="https://www.mysql.com/" target="_blank">
               <div class="devicons">
                 <img src="../../static/img/devicons/mysql-original-wordmark.svg"
                      alt="mysql">
                 <p>MySQL</p>
               </div>
             </a>
-            <a href="#">
+            <a href="https://www.python.org/" target="_blank">
               <div class="devicons">
-                <img src="../../static/img/devicons/mocha-plain.svg"
-                     alt="mocha">
-                <p>Mocha</p>
+                <img src="../../static/img/devicons/python-original.svg"
+                     alt="python">
+                <p>Python</p>
               </div>
             </a>
           </div>
@@ -124,44 +122,44 @@
         <h3>Other</h3>
         <div class="skills">
           <div class="devicons-wrapper">
-            <a href="#">
+            <a href="https://github.com/tonyOP1985" target="_blank">
               <div class="devicons">
                 <img src="../../static/img/devicons/github-original.svg"
                      alt="github">
                 <p>GitHub</p>
               </div>
             </a>
-            <a href="#">
+            <a href="https://www.heroku.com/" target="_blank">
               <div class="devicons">
                 <img src="../../static/img/devicons/heroku-original.svg"
                      alt="heroku">
                 <p>Heroku</p>
               </div>
             </a>
-            <a href="#">
+            <a href="https://mochajs.org/" target="_blank">
               <div class="devicons">
-                <img src="../../static/img/devicons/python-original.svg"
-                     alt="python">
-                <p>Python</p>
+                <img src="../../static/img/devicons/mocha-plain.svg"
+                     alt="mocha">
+                <p>Mocha</p>
               </div>
             </a>
           </div>
           <div class="devicons-wrapper">
-            <a href="#">
+            <a href="https://code.visualstudio.com/" target="_blank">
               <div class="devicons">
                 <img src="../../static/img/devicons/visualstudio-plain.svg"
                      alt="visual studio">
                 <p>VS Code</p>
               </div>
             </a>
-            <a href="#">
+            <a href="https://www.gimp.org/" target="_blank">
               <div class="devicons">
                 <img src="../../static/img/devicons/gimp-original.svg"
                      alt="gimp">
                 <p>Gimp</p>
               </div>
             </a>
-            <a href="#">
+            <a href="https://www.npmjs.com/" target="_blank">
               <div class="devicons">
                 <img src="../../static/img/devicons/npm-original-wordmark.svg"
                      alt="npm">
