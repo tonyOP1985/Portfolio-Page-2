@@ -17,9 +17,8 @@ app.use(serveStatic(path.join(__dirname + "/dist")))
 
 app.post('/', (req, res) => {
   if (req.body.gotcha.length) {
-    let msg = 'Your Message has been sent'
+    let msg = 'Your message has been sent'
     res.send(msg)
-    console.log(`You got spammed by ${req.body.name}`)
   }
   else {
     let output = ` 

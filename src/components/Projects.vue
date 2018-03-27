@@ -52,6 +52,15 @@ export default {
           code: 'https://github.com/tonyOP1985/Portfolio-Page-2'
         },
         {
+          image: '/static/img/pool-pro.png',
+          title: 'Pool Pros',
+          text: 'Home page for fictious web site.',
+          alt: 'Pool Pros',
+          technology: ['Vue.js', 'SCSS'],
+          projectLink: 'https://pool-pros-tonyop.herokuapp.com/',
+          code: 'https://github.com/tonyOP1985/Pool-Pros'
+        },
+        {
           image: '/static/img/cloudy-day.svg',
           title: 'Weather App',
           text: 'Simple weather app.',
@@ -107,9 +116,9 @@ export default {
         },
         {
           image: '/static/img/hangManThumbNail.png',
-          title: 'Hang Man',
-          text: 'Hang Man game with astronomy terms.',
-          alt: 'Hang man image',
+          title: 'Hangman',
+          text: 'Hangman game with astronomy terms.',
+          alt: 'Hangman image',
           technology: ['Javascript', 'jQuery', 'HTML', 'CSS'],
           projectLink: 'https://ancient-journey-60616.herokuapp.com/',
           code: 'https://github.com/tonyOP1985/NodeHangMan'
