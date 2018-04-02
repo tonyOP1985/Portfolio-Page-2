@@ -6,7 +6,7 @@
         <h1>About Me</h1>
       </div>
       <div class="about-content">
-        <img class="image" src="../assets/projectImg/tony-port-img.png" alt="Tony Oliver-Paull">
+        <img class="image" src="/static/img/tony1.png" alt="Tony Oliver-Paull">
         <div class="about-p">
           <p>I am a full-stack web developer with exprerience in all layers of software development, including a knowledge of Javascript, HTML, CSS, Vue,js, Node.js, PHP, Python, MongoDB, and MySQL. I'm passionate about software development, both on the front and back end, and I am always working to learn more. I enjoy projects that push me outside of my comfort zone and knowledge set.</p>
         </div>
