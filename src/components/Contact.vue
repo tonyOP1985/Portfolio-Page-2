@@ -1,65 +1,63 @@
 <template>
-<div class="contact">
-  <div class="title">
-    <div class="title-main">
-      <h1>Contact</h1>
+  <div class="contact">
+    <div class="title">
+      <div class="title-main">
+        <h1>Contact</h1>
+      </div>
+    </div>
+    <div class="msg" v-if="submitted">
+        <p>{{ msg }}</p>
+      </div>
+    <div class="form-area" v-else>
+      <form @submit.prevent="onSubmit" method="POST">
+        <div class="form-group">
+          <input type="text"
+                name="name"
+                v-model="name"
+                required>
+          <span class="bar"></span>
+          <label for="name">Name</label>
+        </div>
+        <div class="form-group">
+          <input type="email"
+                name="email"
+                v-model="email"
+                required>
+          <span class="bar"></span>
+          <label for="email">Email address</label>
+        </div>
+        <div class="form-group">
+          <input type="tel"
+                name="phone"
+                v-model="phone"
+                required>
+          <span class="bar"></span>
+          <label for="phone">Phone number</label>
+        </div>
+        <div class="form-group gotcha">
+          <input type="text"
+                name="gotcha"
+                v-model="gotcha">
+          <span class="bar"></span>
+          <label for="gotcha">Leave blank if you're human</label>
+        </div>
+        <div class="form-group">
+          <textarea name="message"
+                    id="msg"
+                    cols="30"
+                    rows="5"
+                    v-model="messageBody"
+                    required></textarea>
+          <span class="bar"></span>
+          <label for="messsage">Message</label>
+        </div>
+        <button type="submit">SEND</button>
+      </form>
     </div>
   </div>
-   <div class="msg" v-if="submitted">
-      <p>{{ msg }}</p>
-    </div>
-  <div class="form-area" v-else>
-    <form @submit.prevent="onSubmit" method="POST">
-      <div class="form-group">
-        <input type="text"
-               name="name"
-               v-model="name"
-               required>
-        <span class="bar"></span>
-        <label for="name">Name</label>
-      </div>
-      <div class="form-group">
-        <input type="email"
-               name="email"
-               v-model="email"
-               required>
-        <span class="bar"></span>
-        <label for="email">Email address</label>
-      </div>
-      <div class="form-group">
-        <input type="tel"
-               name="phone"
-               v-model="phone"
-               required>
-        <span class="bar"></span>
-        <label for="phone">Phone number</label>
-      </div>
-      <div class="form-group gotcha">
-        <input type="text"
-               name="gotcha"
-               v-model="gotcha">
-        <span class="bar"></span>
-        <label for="gotcha">Leave blank if you're human</label>
-      </div>
-      <div class="form-group">
-        <textarea name="message"
-                  id="msg"
-                  cols="30"
-                  rows="5"
-                  v-model="messageBody"
-                  required></textarea>
-        <span class="bar"></span>
-        <label for="messsage">Message</label>
-      </div>
-      <button type="submit">SEND</button>
-    </form>
-  </div>
-</div>
-
 </template>
 
 <script>
-/* eslint-disable */
 import axios from 'axios'
 
 export default {
@@ -90,7 +88,7 @@ export default {
       this.form.gotcha = this.gotcha
       this.form.messageBody = this.messageBody
       axios
-        .post("https://www.toliverpaull.com/", this.form)
+        .post('https://www.toliverpaull.com/', this.form)
         .then(response => {
           this.msg = response.data
         })
@@ -106,10 +104,10 @@ export default {
       }, 5000)
     },
     onReset () {
-      this.name = '',
-      this.email = '',
-      this.phone = '',
-      this.gotcha = '',
+      this.name = ''
+      this.email = ''
+      this.phone = ''
+      this.gotcha = ''
       this.messageBody = ''
     }
   }

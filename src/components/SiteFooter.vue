@@ -1,33 +1,30 @@
 <template>
-<footer>
-  <div class="container">
-    <div class="footer-logo">
-      <p>2017 Tony Oliver-Paull</p>
-    </div>
-    <div class="links">
-      <div class="links-wrapper">
-        <a href="https://github.com/tonyOP1985" target="_blank" class="btn icon">
-          <i class="fa fa-github fa-2x" aria-hidden="true"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/tony-oliverpaull-62b21434/" target="_blank" class="btn icon">
-          <i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
-        </a>
-        <router-link to='/contact' class="btn icon">
-          <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
-        </router-link>
+  <footer>
+    <div class="container">
+      <div class="footer-logo">
+        <p>2017 Tony Oliver-Paull</p>
+      </div>
+      <div class="links">
+        <div class="links-wrapper">
+          <a href="https://github.com/tonyOP1985" target="_blank" class="btn icon">
+            <i class="fa fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/tony-oliverpaull-62b21434/" target="_blank" class="btn icon">
+            <i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+          <router-link to='/contact' class="btn icon">
+            <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
+          </router-link>
+        </div>
       </div>
     </div>
-  </div>
-</footer>
-
+  </footer>
 </template>
 
 <script>
-/* eslint-disable */
 export default {
   name: 'siteFooter'
 }
-
 </script>
 
 <style scoped>
@@ -119,7 +116,4 @@ footer {
       order: 2;
     }
   }
-
-
-
 </style>

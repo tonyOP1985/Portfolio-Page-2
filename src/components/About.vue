@@ -20,7 +20,7 @@
               <router-link to='/contact' class="btn icon">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
               </router-link>
-              <a href="../../static/Anthony_Oliver-Paull_Resume_2018.pdf" target="_blank" class="resume btn">résumé</a>
+              <a href="../../static/Anthony_Oliver-Paull_Resume_2018.pdf" target="_blank" class="btn resume">résumé</a>
             </div>
           </div>
         </header>
@@ -31,7 +31,6 @@
 </template>
 
 <script>
-/* eslint-disable */
 import AboutMe from './AboutMe'
 export default {
   name: 'about',
@@ -88,22 +87,19 @@ export default {
   }
 
   .links {
-    width: 296px;
+    width: 250px;
     display: flex;
     flex-direction: row;
     margin: 0 auto;
   }
 
   .icon {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin-right: 20px;
+    text-align: center;
+    margin-right: 5px;
     width: 40px;
     height: 40px;
-    /* background-color:#02abd6; */
     background-color:#0291b4;
-    border-radius: 100px;
+    border-radius: 100%;
     color: #fff;
     transition: all 0.2s ease;
   }
@@ -112,8 +108,13 @@ export default {
     text-decoration: none;
   }
 
-  .links i, {
+  .icon i {
+    display: flex;
+    justify-content: space-around;
     color: #fff;
+    width: 40px;
+    height: 40px;
+    padding-top: 30%;
   }
 
   .resume {
@@ -125,7 +126,6 @@ export default {
     font-size: 16px;
     font-weight: 600;
     letter-spacing: 2px;
-    /* background-color:#02abd6; */
     background-color:#0291b4;
     border-radius: 100px;
     color: #fff;
@@ -134,15 +134,10 @@ export default {
   }
 
   .btn:hover {
-    /* background-color:#0291b4; */
     background-color:#02abd6;
   }
 
-
 @media(max-width: 1200px) {
- /* .about {
-    height: 500px;
-  }*/
   .body-container {
     width: 80%;
   }
@@ -195,5 +190,4 @@ export default {
     margin: 0 auto;
   }
 }
-
 </style>

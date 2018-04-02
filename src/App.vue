@@ -9,11 +9,9 @@
 </template>
 
 <script>
-/* eslint-disable */
 import Navigation from './components/Navigation'
-import About from './components/About'
-import Projects from './components/Projects'
-import Contact from './components/Contact'
+// import Projects from './components/Projects'
+// import Contact from './components/Contact'
 import SiteFooter from './components/SiteFooter'
 
 export default {
@@ -24,11 +22,11 @@ export default {
   },
   data () {
     return {
-       active: false
+      active: false
     }
   },
   methods: {
-      addMarginTop (animate) {
+    addMarginTop (animate) {
       this.active = animate
     }
   }
@@ -43,4 +41,3 @@ export default {
     height:100%;
   }
 </style>
-

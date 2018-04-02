@@ -1,42 +1,40 @@
 <template>
-<div class="projects">
-  <div class="title">
-    <div class="title-main">
-      <h1>Projects</h1>
-    </div>
-  </div>
-  <div class="project-wrapper" v-for="info in cardInfo" :key="info">
-    <div class="project-title">
-      <h1>{{ info.title }}</h1>
-    </div>
-    <div class="row">
-      <div class="project-img">
-        <img :src="info.image" :alt="info.alt">
-      </div>
-      <div class="project-info">
-        <p>{{ info.text }}</p>
-        <div v-if="!info.projectLink.length">
-          <a class="btn" :href="info.code" target="_blank">View Code</a>
-        </div>
-        <div v-else>
-          <a class="btn" :href="info.code" target="_blank">View Code</a>
-          <a class="btn" :href="info.projectLink" target="_blank">View Project</a>
-        </div>
-        <div class="technologies">
-          <h3>Technologies Used</h3>
-          <ul>
-            <li v-for="tech in info.technology" :key="tech">{{tech}}</li>
-          </ul>
-        </div>
+  <div class="projects">
+    <div class="title">
+      <div class="title-main">
+        <h1>Projects</h1>
       </div>
     </div>
+    <div class="project-wrapper" v-for="info in cardInfo" :key="info">
+      <div class="project-title">
+        <h1>{{ info.title }}</h1>
+      </div>
+      <div class="row">
+        <div class="project-img">
+          <img :src="info.image" :alt="info.alt">
+        </div>
+        <div class="project-info">
+          <p>{{ info.text }}</p>
+          <div v-if="!info.projectLink.length">
+            <a class="btn" :href="info.code" target="_blank">View Code</a>
+          </div>
+          <div v-else>
+            <a class="btn" :href="info.code" target="_blank">View Code</a>
+            <a class="btn" :href="info.projectLink" target="_blank">View Project</a>
+          </div>
+          <div class="technologies">
+            <h3>Technologies Used</h3>
+            <ul>
+              <li v-for="tech in info.technology" :key="tech">{{tech}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-
 </template>
 
 <script>
-/* eslint-disable */
 export default {
   name: 'projects',
   data () {
@@ -92,7 +90,7 @@ export default {
           title: 'Musician Availability API',
           text: 'RESTful API with MongoDB.',
           alt: 'Node.js Code',
-          technology: ['Node.js','Express', 'MongoDB', 'Mongoose'],
+          technology: ['Node.js', 'Express', 'MongoDB', 'Mongoose'],
           projectLink: '',
           code: 'https://github.com/tonyOP1985/musician-availability-api'
         },
@@ -127,7 +125,6 @@ export default {
     }
   }
 }
-
 </script>
 
 <style scoped>
@@ -232,7 +229,7 @@ ul li:before {
     width: 80%;
     margin: 0 auto;
   }
-  
+
   .row  {
     width: 100%;
   }
@@ -277,11 +274,9 @@ ul li:before {
     font-size: 1.2rem;
   }
 
-
   .project-img img {
     width: 200px;
     height: 122.5px;
-    /* margin: 0 auto; */
   }
 }
 </style>
