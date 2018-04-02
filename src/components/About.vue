@@ -139,7 +139,7 @@ export default {
     font-weight: 600;
     letter-spacing: 2px;
     background-color:#0291b4;
-    border-radius: 100px;
+    border-radius: 100%;
     color: #fff;
     text-transform: uppercase;
     transition: all 0.2s ease;
