@@ -11,7 +11,7 @@
           </div>
           <div class="link-box">
             <div class="links">
-              <a href="https://github.com/tonyOP1985" target="_blank" class="btn icon">
+              <a href="https://github.com/tonyOP1985" target="_blank" class="btn icon github">
                 <i class="fa fa-github fa-lg" aria-hidden="true"></i>
               </a>
               <a href="https://www.linkedin.com/in/tony-oliverpaull-62b21434/" target="_blank" class="btn icon">
@@ -115,6 +115,18 @@ export default {
     width: 40px;
     height: 40px;
     padding-top: 30%;
+  }
+
+  .fa-github {
+    font-size: 25px;
+  }
+
+  .github {
+    position: relative;
+  }
+
+  .github i {
+    position: absolute;
   }
 
   .resume {
