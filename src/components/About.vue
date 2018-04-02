@@ -20,7 +20,7 @@
               <router-link to='/contact' class="btn icon">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
               </router-link>
-              <a href="../../static/AnthonyOliverPaullResume.pdf" target="_blank" class="resume btn">résumé</a>
+              <a href="../../static/Anthony_Oliver-Paull_Resume_2018.pdf" target="_blank" class="resume btn">résumé</a>
             </div>
           </div>
         </header>
